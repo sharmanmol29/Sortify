@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sortify - Advanced Sorting Visualizer</title>
+  <link rel="stylesheet" href="sortify_css.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header-section">
+      <h1>🎯 Sortify</h1>
+    </div>
+    <p class="subtitle">Watch algorithms come to life with beautiful animations</p>
+
+    <!-- Controls Section -->
+    <div class="controls">
+      <div class="control-group">
+        <label for="inputArray">Enter Numbers (comma separated):</label>
+        <input type="text" id="inputArray" placeholder="e.g. 64, 34, 25, 12, 22, 11, 90">
+      </div>
+
+      <div class="control-group">
+        <label for="algorithm">Choose Algorithm:</label>
+        <select id="algorithm">
+          <option value="">Select an Algorithm</option>
+          <option value="bubbleSort">Bubble Sort 🫧</option>
+          <option value="selectionSort">Selection Sort</option>
+          <option value="insertionSort">Insertion Sort</option>
+          <option value="mergeSort">Merge Sort</option>
+          <option value="quickSort">Quick Sort</option>
+          <option value="heapSort">Heap Sort</option>
+          <option value="countingSort">Counting Sort</option>
+          <option value="radixSort">Radix Sort</option>
+          <option value="bucketSort">Bucket Sort</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Button Controls -->
+    <div class="button-group">
+      <button class="btn-start" id="startBtn">Start Sorting</button>
+      <button class="btn-pause" id="pauseBtn" disabled>Pause</button>
+      <button class="btn-reset" id="resetBtn" disabled>Reset</button>
+      <button class="btn-generate" id="generateBtn">Generate Random</button>
+    </div>
+
+    <!-- Speed Control -->
+    <div class="speed-control">
+      <label>Speed:</label>
+      <input type="range" id="speedRange" min="50" max="2000" step="50" value="500">
+      <span class="speed-label" id="speedLabel">Medium</span>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-label">Comparisons</div>
+        <div class="stat-value" id="comparisons">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Swaps</div>
+        <div class="stat-value" id="swaps">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Array Size</div>
+        <div class="stat-value" id="arraySize">0</div>
+      </div>
+    </div>
+
+    <!-- Visualization Containers -->
+    <div id="arrayContainer"></div>
+    <div id="bubbleContainer"></div>
+    <div id="bucketContainer" style="display: none;"></div>
+    <div id="heapContainer" style="display: none;"></div>
+
+    <!-- Algorithm Information -->
+    <div id="algorithmInfo"></div>
+
+    <!-- Footer -->
+    <footer>
+      Made with <span class="heart">❤️</span> by Anmol and Gautam
+    </footer>
+  </div>
+
+  <script src="sortify_js.js"></script>
+</body>
+</html>
